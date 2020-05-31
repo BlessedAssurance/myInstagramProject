@@ -21,3 +21,12 @@ class PostDetailView(DetailView):
     template_name = 'instagramapp/detail.html'     
     
 
+class PostCreateView(LoginRequiredMixin ,CreateView):
+    model = Post
+    form_class = CreatePostForm
+    template_name = 'instagramapp/createpost.html' 
+    success_url = reverse_lazy('home')
+    
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
