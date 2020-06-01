@@ -1,0 +1,29 @@
+{% extends "registration/base.html" %} 
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="mylogin1">
+    <span id="root">
+        <section class="section-all">
+    
+          <!-- 1-Role Main -->
+          <main class="main" role="main">
+            <div class="wrapper">
+              <article class="article">
+                <div class="content">
+                  <div class="login-box">
+                    <div class="header">
+                      <img class="logo ml-5 logox" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" alt="Instagram">
+                    </div><!-- Header end -->
+                    <div class="form-wrap">
+                      <form class="form" method="POST">
+                        <div class="card m-3 p-3 border-0">
+                            {% csrf_token %}
+                            {{ form }}
+                          </div>
+                        <span class="button-box">
+                          <button class="btn" type="submit" name="submit">Log in</button>
+                        </span>  
+
+{% endblock%}
+    
+</div>
