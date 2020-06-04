@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'bootstrap3',
     'django.contrib.admin',
     'instagramapp.apps.InstagramappConfig',
+    'users.apps.UsersConfig',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
